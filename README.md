@@ -1,9 +1,11 @@
 # School Management App
 
-A Flutter-based school management application that runs from one codebase on:
+A Flutter-based school management application starter focused on shared Dart code (`lib/` and `test/`) for:
 - Desktop (Windows, macOS, Linux)
 - Android
 - iOS
+
+> **Note:** This repository currently tracks only the shared app layer. Platform folders (`android/`, `ios/`, `linux/`, `macos/`, `windows/`) must be generated locally before running on those targets.
 
 ## Features
 - Dashboard with key statistics
@@ -23,11 +25,15 @@ A Flutter-based school management application that runs from one codebase on:
    ```bash
    flutter --version
    ```
-2. Install dependencies:
+2. Generate platform scaffolding in this project root (required once in a fresh checkout):
+   ```bash
+   flutter create --platforms=android,ios,linux,macos,windows .
+   ```
+3. Install dependencies:
    ```bash
    flutter pub get
    ```
-3. Run on any connected platform:
+4. Run on a connected/supported device:
    ```bash
    flutter run
    ```
